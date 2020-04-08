@@ -1,0 +1,43 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+  }
+  
+  svg {
+    height: 500px;
+    width: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+  
+  svg path {
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;
+    animation: dash 10s forwards;
+  }
+  
+  svg g {
+    animation: fill-in 2s 6s forwards;
+    fill-opacity: 0;
+  }
+  
+  @keyframes dash {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+  
+  @keyframes fill-in {
+    to {
+      fill-opacity: 1;
+      stroke-opacity: 0;
+    }
+  }
+  
+  svg circle {
+    display: none;
+  }
+  
